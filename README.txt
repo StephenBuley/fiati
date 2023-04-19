@@ -26,13 +26,13 @@ Method 1: hexadecimal input followed by `Alt`
 ========
 On Windows, some applications, such as Microsoft Word (part of the Microsoft Office suite) and WordPad (included with every Windows installation), have support for converting a typed alphanumeric sequence into a single Unicode character.
 
-The Unicode code point for a flute base diagram in Fiati is U+EC40, which is a hexadecimal number (60480 in decimal). To enter this character in Word or WordPad, type `EC40` followed by `Alt+X` (hold the `Alt` key and then hit the `X` key). The typed characters **EC40** will be replaced by a single character, which may display as an empty rectangle or a rectangle containing **?**. Select this character and change the font to Fiati, and the flute base diagram appears.
+The Unicode code point for a flute base diagram in Fiati is U+E000, which is a hexadecimal number. To enter this character in Word or WordPad, type `E000` followed by `Alt+X` (hold the `Alt` key and then hit the `X` key). The typed characters **E000** will be replaced by a single character, which may display as an empty rectangle or a rectangle containing **?**. Select this character and change the font to Fiati, and the flute base diagram appears.
 
-Although Unicode code points are normally written in the form U+EC40, you can ignore the "U+" part when entering the code point in this and the following method.
+Although Unicode code points are normally written in the form U+E000, you can ignore the "U+" part when entering the code point in this and the following method.
 
 Method 2: `Alt` + hexadecimal input
 ========
-If the application you are using does not support the kind of conversion described above, you can enable Unicode input by holding `Alt`, then typing `+` **on the numeric keypad**, then typing the hexadecimal number on the numeric keypad, before finally releasing `Alt`. For example, to type the flute base diagram (U+EC40), hold `Alt`, type keypad `+`, then `EC40`, then release `Alt`. Again, if Fiati is not the selected font, you may see an empty rectangle or a rectangle containing **?**. Select this character and change the font to Fiati, and the flute base diagram appears.
+If the application you are using does not support the kind of conversion described above, you can enable Unicode input by holding `Alt`, then typing `+` **on the numeric keypad**, then typing the hexadecimal number on the numeric keypad, before finally releasing `Alt`. For example, to type the flute base diagram (U+E000), hold `Alt`, type keypad `+`, then `E000`, then release `Alt`. Again, if Fiati is not the selected font, you may see an empty rectangle or a rectangle containing **?**. Select this character and change the font to Fiati, and the flute base diagram appears.
 
 Method 3: Character Map
 ========
@@ -60,7 +60,7 @@ For Mac computers running MacOS, the simplest method to insert arbitrary Unicode
 
 The Unicode Hex Input input method works in the majority of MacOS applications. To try it out, for example, open a new text document in TextEdit. Fiati does not appear by default in the font menu in TextEdit's toolbar, because it is not an English-language font, so to choose Fiati you must show the Fonts panel by choosing `Format` ▸ `Font` ▸ `Show Fonts` or typing `⌘T`. In the Fonts panel, choose **All fonts** under **Collection**, then choose **Fiati** under **Family**, then close the Fonts panel (type `⌘T` again).
 
-Fiati is now the chosen font (and will now appear in the font menu in TextEdit's toolbar for this document). To type a flute base diagram, which has the code point U+EC40, first choose the **Unicode Hex Input** input method from the input menu in the menu bar. Now hold down `Alt/Option ⌥` and type `EC40` (do not type the "U+" prefix), then release `Alt/Option ⌥`.
+Fiati is now the chosen font (and will now appear in the font menu in TextEdit's toolbar for this document). To type a flute base diagram, which has the code point U+E000, first choose the **Unicode Hex Input** input method from the input menu in the menu bar. Now hold down `Alt/Option ⌥` and type `E000` (do not type the "U+" prefix), then release `Alt/Option ⌥`.
 
 If you want to switch between your normal language input method and the Unicode Hex Input method quickly, you can assign a system keyboard shortcut in the **Keyboard** pane of System Preferences. Choose the **Shortcuts** tab, then in the left-hand list choose **Input Sources**. Switch on the checkbox for either or both of **Select the previous input source** and **Select the next input source**, and assign a keyboard shortcut. The default shortcut suggested by MacOS is used for Spotlight by default, so you may wish to assign another shortcut, e.g. `^Space` (`^` is the symbol that corresponds to the `Ctrl` key).
 
@@ -68,9 +68,13 @@ If you want to switch between your normal language input method and the Unicode 
 Usage notes for Fiati
 =====================
 
+Unicode Character Data
+======================
+Each glyph name and the corresponding hexadecimal code can be found in the source/glyph_data.csv file in this repository (https://github.com/eduardomourar/fiati/blob/master/source/glyph_data.csv). 
+
 Scale factor
 ============
-Fiati is scaled such that the height of a five-line staff (e.g. U+E014) from the Bravura font is approximately the same as the height of an upper case letter in a regular text font at the same point size. It is designed to be used both in-line, i.e. in the middle of a run of text at the same point size, and on its own, typically at a larger point size. As such, all symbols in Fiati are scaled appropriately to be drawn at the correct size on a five-line staff.
+Fiati is scaled such that the height of a five-line staff (e.g. U+E014 in Bravura) from the Bravura font is approximately the same as the height of an upper case letter in a regular text font at the same point size. It is designed to be used both in-line, i.e. in the middle of a run of text at the same point size, and on its own, typically at a larger point size. As such, all symbols in Fiati are scaled appropriately to be drawn at the correct size on a five-line staff.
 
 Zero-width characters
 =====================
